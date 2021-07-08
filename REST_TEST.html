@@ -4,22 +4,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  var invocation = new XMLHttpRequest();
-  if(invocation){
   $("button").click(function(){
     $.ajax({
-    	type:"GET",
-      url: "http://localhost:8080/hello", 
+    	url: "http://localhost:8080/hello", 
     	success: function(result){
       $("#div1").html(result);
     }});
   });
-  }
 });
 </script>
 </head>
 <body>
-  <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
-  <button>Get External Content</button>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button>Get External Content</button>
+
 </body>
 </html>
